@@ -131,7 +131,7 @@ function thirdTask() {
         secondcheck = secondcheck + Number(prompt("Введитк секунды"));
         converter();
         console.log(clocks);
-        return
+
     }
     document.getElementById('minchanger').onclick = addMin;
 
@@ -139,7 +139,7 @@ function thirdTask() {
 
         minetcheck = minetcheck + Number(prompt("Введитк минуты"));
         converter();
-        return
+
     }
     document.getElementById('hourchanger').onclick = addHour;
 
@@ -147,7 +147,7 @@ function thirdTask() {
 
         hourcheck = hourcheck + Number(prompt("Введитк часы"));
         converter();
-        return
+
     }
     document.getElementById('timer').onclick = timer;
 
