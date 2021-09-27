@@ -124,32 +124,36 @@ function thirdTask() {
     }
     console.log(clocks);
 
-    document.getElementById('secchanger') = addSec;
+    document.getElementById('secchanger').onclick = addSec;
 
-    function addSec() {
+    function addSec(secondcheck) {
 
         secondcheck = secondcheck + Number(prompt("Введитк секунды"));
         converter();
+        console.log(clocks);
+        return
     }
-    document.getElementById('minchanger') = addMin;
+    document.getElementById('minchanger').onclick = addMin;
 
-    function addMin() {
+    function addMin(minetcheck) {
 
-        minetcheck = minetcheck + Number(prompt("Введитк секунды"));
+        minetcheck = minetcheck + Number(prompt("Введитк минуты"));
         converter();
+        return
     }
-    document.getElementById('hourchanger') = addHour;
+    document.getElementById('hourchanger').onclick = addHour;
 
-    function addHour() {
+    function addHour(hourcheck) {
 
-        hourcheck = hourcheck + Number(prompt("Введитк секунды"));
+        hourcheck = hourcheck + Number(prompt("Введитк часы"));
         converter();
+        return
     }
-    document.getElementById('timer') = timer;
+    document.getElementById('timer').onclick = timer;
 
     function timer() {
 
-        alert(clocks);
+        console.log(clocks);
 
     }
 }
