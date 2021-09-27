@@ -96,6 +96,7 @@ function thirdTask() {
     let minetcheck = Number(prompt("Введите минуты"));
     let secondcheck = Number(prompt("Введитк секунды"));
 
+
     function converter() {
 
         if (secondcheck > 59) {
@@ -115,6 +116,7 @@ function thirdTask() {
                 hourcheck = hourcheck - 24;
             }
         }
+
     }
     converter();
     let clocks = {
@@ -126,28 +128,33 @@ function thirdTask() {
 
     document.getElementById('secchanger').onclick = addSec;
 
-    function addSec(secondcheck) {
-
+    function addSec() {
         secondcheck = secondcheck + Number(prompt("Введитк секунды"));
         converter();
-        console.log(clocks);
+        clocks.seconds = secondcheck;
+        clocks.minets = minetcheck;
+        clocks.hours = hourcheck;
 
     }
     document.getElementById('minchanger').onclick = addMin;
 
-    function addMin(minetcheck) {
-
+    function addMin() {
         minetcheck = minetcheck + Number(prompt("Введитк минуты"));
         converter();
+        clocks.seconds = secondcheck;
+        clocks.minets = minetcheck;
+        clocks.hours = hourcheck;
 
     }
     document.getElementById('hourchanger').onclick = addHour;
 
-    function addHour(hourcheck) {
+    function addHour() {
 
         hourcheck = hourcheck + Number(prompt("Введитк часы"));
         converter();
-
+        clocks.seconds = secondcheck;
+        clocks.minets = minetcheck;
+        clocks.hours = hourcheck;
     }
     document.getElementById('timer').onclick = timer;
 
